@@ -75,10 +75,6 @@ func (b *Budget) RemoveItem(description string) {
 func CreateBudget(month time.Month, max float32) (*Budget, error) {
 	var newBudget *Budget
 	newBudget.Max = max
-	if hasEntry, _ == report[month] {
-		return nil, errDuplicateEntry
-	}
-
 	report[month] = newBudget
 	return newBudget, nil
 }
