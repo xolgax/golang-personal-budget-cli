@@ -1,3 +1,3 @@
-module personal-budget
+module golang-personal-budget-cli
 
-go 1.13
+go 1.18
