@@ -74,7 +74,6 @@ func (b *Budget) RemoveItem(description string) {
 // CreateBudget creates a new budget with a specified max
 func CreateBudget(month time.Month, max float32) (*Budget, error) {
 	var newBudget *Budget
-<<<<<<< Updated upstream
 	if len(report) >= 12 {
 		return nil, errReportIsFull
 	}
@@ -82,13 +81,6 @@ func CreateBudget(month time.Month, max float32) (*Budget, error) {
 		return nil, errDuplicateEntry
 	}
 	newBudget = &Budget{Max: max}
-=======
-	newBudget.Max = max
-	// var hasEntry = report[month]
-	if hasEntry == report[month] {
-		return nil, errDuplicateEntry
-	}
->>>>>>> Stashed changes
 	report[month] = newBudget
 	return newBudget, nil
 }
